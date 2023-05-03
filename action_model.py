@@ -43,8 +43,7 @@ object_types = ["na",
 
 
 #Path to dataset
-PATH = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\"
-
+PATH = ""
 
 def random_colors(N):
     np.random.seed(1)
@@ -345,7 +344,7 @@ def load_virat_dataset():
 
 import sys
 import torch
-sys.path.append("C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main")
+sys.path.append("...\\yolov7-main")
 from utils.general import xyxy2xywh, xywh2xyxy
 
 ##Generate annotations for yolov
@@ -364,7 +363,7 @@ def generate_yolov_object_annotations():
     fc=0
     FPS = 0
     for i in range(len(annot_list)):
-        save_dir = ('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\Yolov_annotations\\')
+        save_dir = ('VIRATDATASET...VIRAT Ground Dataset\\Yolov_annotations\\')
         try:
             objects = read_annots_object_only(path+annot_list[0][i]+".viratdata.objects.txt")
         except:
@@ -479,7 +478,7 @@ def split_video_yolov(name):
         print("error getting total frames")
         total_frames = "NaN"
 
-    path = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\Yolov_images\\"+name+"\\"
+    path = "VIRATDATASET...\\VIRAT Ground Dataset\\Yolov_images\\"+name+"\\"
     os.makedirs(os.path.dirname(path), exist_ok=True)
     start_time = time.time()
     # FPS update time in seconds
@@ -535,7 +534,7 @@ def generate_yolov_action_annotations():
     fc=0
     FPS = 0
     for i in range(len(annot_list)):
-        save_dir = ('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\action_annotations\\')
+        save_dir = ('VIRATDATASET...\\VIRAT Ground Dataset\\action_annotations\\')
         try:
             events = read_annots_events_only(path+annot_list[0][i]+".viratdata.events.txt")
         except:
@@ -579,11 +578,11 @@ def split_action_video_yolov(name):
         print("error getting total frames")
         total_frames = "NaN"
 
-    path = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\action_images\\"+name+"\\"
+    path = "VIRATDATASET...\\VIRAT Ground Dataset\\action_images\\"+name+"\\"
     os.makedirs(os.path.dirname(path), exist_ok=True)
     start_time = time.time()
     # FPS update time in seconds
-    text = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\action_annotations\\"+name+"\\"
+    text = "VIRATDATASET...\\VIRAT Ground Dataset\\action_annotations\\"+name+"\\"
     display_time = 1
     fc=0
     FPS = 0
@@ -735,9 +734,9 @@ def split_test_train_val():
     videos_path = file_path + "videos\\"
     class_path = file_path + "class_label\\"
 
-    train_save_path = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\train"
-    test_save_path  = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\test"
-    val_save_path   = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\val"
+    train_save_path = "...\\action_detection\\data\\train"
+    test_save_path  = "...\\action_detection\\data\\test"
+    val_save_path   = "...\\action_detection\\data\\val"
 
     count = 0
     #split: 80, 10, 10
