@@ -207,7 +207,7 @@ def initialize_action_model():
 
     model = keras.Model(input, x)
 
-    model.load_weights('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\models\\new_action_model210423.h5')
+    model.load_weights('weightslocation...\\new_action_model.h5')
     
     return model
 
@@ -218,7 +218,7 @@ def detect_action(modeli, framecoords, last10frames):
     frames = []
     #[ids[i], roi, int(roi[1]), int(roi[1]+h) , int(roi[0]), int(roi[0]+w)]
 
-    PATH = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\"
+    PATH = "..."
     if len(framecoords) != 10 and len(last10frames) != 10:
         return None, None
     
