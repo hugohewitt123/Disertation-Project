@@ -130,7 +130,7 @@ batch_size = 8 # 8
 output_signature = (tf.TensorSpec(shape = (None, None, None, 3), dtype = tf.float32),
                     tf.TensorSpec(shape = (), dtype = tf.int16))
 
-PATH = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\"
+PATH = "..."
 
 train_ds = tf.data.Dataset.from_generator(FrameGenerator(Path(PATH+"train\\"), n_frames, training=True),
                                           output_signature = output_signature)
@@ -364,11 +364,11 @@ def plot_history(history):
     ax2.legend(['Train', 'Validation'])
 
     #plt.show()
-    plt.savefig('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\models\\history.png')
+    plt.savefig('Savelocation...\\history.png')
 
 model.evaluate(test_ds, return_dict=True)
 
-model.save('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\models\\new_action_model.h5')
+model.save('Savelocation...\\new_action_model.h5')
 print("model saved")
 
 plot_history(history)
