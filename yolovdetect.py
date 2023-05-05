@@ -14,7 +14,7 @@ from numpy import random
 from inference_action_model import (initialize_action_model, detect_action)
 
 import sys
-sys.path.append("C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main")
+sys.path.append("PathtoYOLO...\\yolov7-main")
 
 from models.experimental import attempt_load
 from utils.datasets import LoadStreams, LoadImages
