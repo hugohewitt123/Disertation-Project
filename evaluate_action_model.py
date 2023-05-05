@@ -295,7 +295,7 @@ x = layers.Dense(len(CLASS_NAMES))(x)
 
 model = keras.Model(input, x)
 
-model.load_weights('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\models\\new_action_model210423.h5')
+model.load_weights('...\\new_action_model210423.h5')
 
 
 n_frames = 10 # 10
@@ -304,7 +304,7 @@ batch_size = 8 # 8
 output_signature = (tf.TensorSpec(shape = (None, None, None, 3), dtype = tf.float32),
                     tf.TensorSpec(shape = (), dtype = tf.int16))
 
-PATH = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\data\\"
+PATH = "Pathtodataset...\\action_detection\\data\\"
 
 train_ds = tf.data.Dataset.from_generator(FrameGenerator(Path(PATH+"train\\"), n_frames, training=True),
                                           output_signature = output_signature)
@@ -362,11 +362,11 @@ labels = list(fg.class_ids_for_name.keys())
 
 #actual, predicted = get_actual_predicted_labels(train_ds)
 #plot_confusion_matrix(actual, predicted, labels, 'training')
-#plt.savefig('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\evaluate\\evaluatetrain.png')
+#plt.savefig('...\\evaluatetrain.png')
 
 #actual, predicted = get_actual_predicted_labels(test_ds)
 #plot_confusion_matrix(actual, predicted, labels, 'test')
-#plt.savefig('C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\yolov7-main\\action_detection\\runs\\evaluate\\evaluatetest.png')
+#plt.savefig('...\\evaluatetest.png')
 
 def calculate_classification_metrics(y_actual, y_pred, labels):
   """
