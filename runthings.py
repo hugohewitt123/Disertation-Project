@@ -40,7 +40,7 @@ test_video(name)
 #
   #
     #### These functions are to run the object and action detection
-PATH = "C:\\Users\\hugo\\Documents\\University\\YEAR_3\\ECM3401_Project\\Action Detection\\datasets\\VIRAT\\Public Dataset\\VIRAT Video Dataset Release 2.0\\VIRAT Ground Dataset\\videos_original\\"
+PATH = "Pathtodataset...\\VIRAT Ground Dataset\\videos_original\\"
 
 #source = PATH+random_video()+".mp4"
 #source = PATH+"VIRAT_S_000200_01_000226_000268"+".mp4"
